@@ -32,7 +32,7 @@ def ajuda_menu():
     while option.lower() not in ['']:
         print('Por favor, entre um comando válido. ')
         option=input("> ")
-        return
+        return ajuda_menu()
 
     
 def principal():
@@ -40,8 +40,9 @@ def principal():
     print("#" * 35)
     print('# Data Manager - Tela Inicial #')
     print("#" * 35)
-    print('1 — Buscar Vendas')
-    print('2 — Buscar Produtos')
+    print('1 — Buscar dados')
+    print('2 — Analisar dados')
+    print('3 — Exportar dados')
     print('3 — Ajuda')
     print('4 — Sair')
     print('Feito por Jorge Magno e Matheus Binder.')
@@ -59,3 +60,16 @@ def ajuda():
     print('Feito por Jorge Magno e Matheus Binder.')
     ajuda_menu()
     return(principal)
+
+
+def analisar():
+    os.system('cls')
+    print("#" * 35)
+    print('# Data Manager - Tela de Análise #')
+    print("#" * 35)
+    print('1 — Analisar Renda')
+    print('2 — Analisar Vendas')
+    print('3 — Voltar')
+    print('4 — Sair')
+    print('Feito por Jorge Magno e Matheus Binder.')
+    principal_menu()
