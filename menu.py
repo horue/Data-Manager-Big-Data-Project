@@ -24,7 +24,7 @@ def analisar_menu():
     if option.lower() == ('1'):
         print(1)
     elif option.lower() == ('2'):
-        print(1)
+        analisar_vendas()
     elif option.lower() == ('3'):
         principal()
     elif option.lower() == ('4'):
@@ -81,6 +81,18 @@ def analisar():
     print("#" * 35)
     print('1 — Analisar Renda')
     print('2 — Analisar Vendas')
+    print('3 — Voltar')
+    print('4 — Sair')
+    print('Feito por Jorge Magno e Matheus Binder.')
+    analisar_menu()
+
+def analisar_vendas():
+    os.system('cls')
+    print("#" * 35)
+    print('# Data Manager - Tela de Análise #')
+    print("#" * 35)
+    print('1 — Produtos mais vendidos')
+    print('2 — Analisar menos vendidos')
     print('3 — Voltar')
     print('4 — Sair')
     print('Feito por Jorge Magno e Matheus Binder.')
