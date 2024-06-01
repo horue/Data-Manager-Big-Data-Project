@@ -1,7 +1,6 @@
 import webbrowser as wb
 import sys
 import os
-from analizer import *
 
 
 
@@ -11,7 +10,7 @@ def principal_menu():
     if option.lower() == ("1"):
         print(1)
     elif option.lower() == ('2'):
-        print(1)
+        analisar()
     elif option.lower() ==  ('3'):
         ajuda()
     elif option.lower() == ("4"):
@@ -20,6 +19,19 @@ def principal_menu():
         print("Por favor, entre um comando válido.")
         option=input("> ")
 
+def analisar_menu():
+    option=input('> ')
+    if option.lower() == ('1'):
+        print(1)
+    elif option.lower() == ('2'):
+        print(1)
+    elif option.lower() == ('3'):
+        principal()
+    elif option.lower() == ('4'):
+        sys.exit
+    while option.lower() not in ['1', '2', '3', '4']:
+        print('Por favor, entre um comando válido.')
+        option=input('> ')
 
 
 def ajuda_menu():
@@ -72,4 +84,4 @@ def analisar():
     print('3 — Voltar')
     print('4 — Sair')
     print('Feito por Jorge Magno e Matheus Binder.')
-    principal_menu()
+    analisar_menu()
