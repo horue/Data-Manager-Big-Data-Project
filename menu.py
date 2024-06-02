@@ -21,18 +21,18 @@ def principal_menu():
 
 def analisar_menu():
     option=input('> ')
-    if option.lower() == ('1'):
+    if option == ('1'):
         print(1)
-    elif option.lower() == ('2'):
+    elif option == ('2'):
         analisar_vendas()
-    elif option.lower() == ('3'):
+    elif option == ('3'):
         principal()
-    elif option.lower() == ('4'):
+    elif option == ('4'):
         sys.exit
-    while option.lower() not in ['1', '2', '3', '4']:
+    else:
         print('Por favor, entre um comando válido.')
-        option=input('> ')
-
+        analisar_menu()
+        
 def analisar_vendas_menu():
     option=input('> ')
     if option == ('1'):
