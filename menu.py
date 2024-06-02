@@ -33,6 +33,19 @@ def analisar_menu():
         print('Por favor, entre um comando válido.')
         option=input('> ')
 
+def analisar_vendas_menu():
+    option=input('> ')
+    if option == ('1'):
+        print('Produtos mais vendidos.')
+    elif option == ('2'):
+        print('Produtos menos vendidos.')
+    elif option == ('3'):
+        principal()
+    elif option == ('4'):
+        sys.exit()
+    else:
+        print('Por favor, entre um comando válido.')
+        analisar_vendas_menu()
 
 def ajuda_menu():
     option=input("> ")
@@ -96,4 +109,4 @@ def analisar_vendas():
     print('3 — Voltar')
     print('4 — Sair')
     print('Feito por Jorge Magno e Matheus Binder.')
-    analisar_menu()
+    analisar_vendas_menu()
