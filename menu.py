@@ -7,17 +7,17 @@ import os
 
 def principal_menu():
     option=input("> ")
-    if option.lower() == ("1"):
+    if option == ("1"):
         print(1)
-    elif option.lower() == ('2'):
+    elif option == ('2'):
         analisar()
-    elif option.lower() ==  ('3'):
+    elif option ==  ('3'):
         ajuda()
-    elif option.lower() == ("4"):
-        sys.exit
-    while option.lower() not in ['1', '2', '3', '4', '5']:
+    elif option == ("4"):
+        sys.exit()
+    else:
         print("Por favor, entre um comando válido.")
-        option=input("> ")
+        principal_menu()
 
 def analisar_menu():
     option=input('> ')
