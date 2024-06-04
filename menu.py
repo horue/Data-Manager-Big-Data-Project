@@ -1,4 +1,3 @@
-from analizer import *
 import webbrowser as wb
 import sys
 import os
