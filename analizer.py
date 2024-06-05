@@ -5,7 +5,6 @@ df = dados_vendas
 df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y')
 
 
-
 def mais_vendidos(mes_desejado):
     df_mes = df[(df['Data'].dt.month == mes_desejado)]
 
@@ -14,7 +13,6 @@ def mais_vendidos(mes_desejado):
 
     print(f'Produtos mais vendidos - Mês {mes_desejado}')
     print(produtos_vendidos)
-
 
 def menos_vendidos(mes_desejado):
     df_mes = df[(df['Data'].dt.month == mes_desejado)]
@@ -33,6 +31,16 @@ def meses(ascending):
     vendas_por_mes = vendas_por_mes.sort_values(by='Preço Total', ascending=ascending)
     print(vendas_por_mes)
 
+def media_vendas():
+    df['Ano Mes'] = df['Data'].dt.to_period('M')
+
+    vendas_por_mes = df.groupby('Ano Mes')['Preço Total'].sum().reset_index()
+    media_vendas_por_mes = vendas_por_mes['Preço Total'].mean()
+
+    print("Média de vendas por mês: R$ {:.2f}".format(media_vendas_por_mes))
+
+
 mais_vendidos(mes_desejado=4)
 menos_vendidos(mes_desejado=2)
 meses(ascending=False)
+media_vendas()
