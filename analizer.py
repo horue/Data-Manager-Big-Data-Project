@@ -25,14 +25,14 @@ def menos_vendidos(mes_desejado):
     print(f'Produtos menos vendidos - Mês {mes_desejado}')
     print(produtos_vendidos)
 
-def meses():
+def meses(ascending):
     df['Ano Mes'] = df['Data'].dt.to_period('M')
 
     vendas_por_mes = df.groupby('Ano Mes')['Preço Total'].sum().reset_index()
 
-    vendas_por_mes = vendas_por_mes.sort_values(by='Preço Total')
+    vendas_por_mes = vendas_por_mes.sort_values(by='Preço Total', ascending=ascending)
     print(vendas_por_mes)
 
 mais_vendidos(mes_desejado=4)
 menos_vendidos(mes_desejado=2)
-meses()
+meses(ascending=False)
