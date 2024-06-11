@@ -39,8 +39,8 @@ def media_vendas():
 
     print("Média de vendas por mês: R$ {:.2f}".format(media_vendas_por_mes))
 
-
-mais_vendidos(mes_desejado=4)
-menos_vendidos(mes_desejado=2)
-meses(ascending=False)
-media_vendas()
+def run():
+    mais_vendidos(mes_desejado=4)
+    menos_vendidos(mes_desejado=2)
+    meses(ascending=False)
+    media_vendas()
