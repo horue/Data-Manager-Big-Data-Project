@@ -24,8 +24,10 @@ def analisar_menu():
     elif option == ('2'):
         analisar_vendas()
     elif option == ('3'):
-        principal()
+        meses()
     elif option == ('4'):
+        principal
+    elif option == ('5'):
         sys.exit
     else:
         print('Por favor, entre um comando válido.')
@@ -39,9 +41,11 @@ def analisar_vendas_menu():
     elif option == ('2'):
         print('Produtos menos vendidos.')
     elif option == ('3'):
-        principal()
+        meses(ascending=False)
     elif option == ('4'):
-        sys.exit()
+        principal
+    elif option == ('5'):
+        sys.exit
     else:
         print('Por favor, entre um comando válido.')
         analisar_vendas_menu()
@@ -105,7 +109,8 @@ def analisar_vendas():
     print("#" * 35)
     print('1 — Produtos mais vendidos')
     print('2 — Analisar menos vendidos')
-    print('3 — Voltar')
-    print('4 — Sair')
+    print('3 — Meses com mais vendas')
+    print('4 — Voltar')
+    print('5 — Sair')
     print('Feito por Jorge Magno e Matheus Binder.')
     analisar_vendas_menu()
