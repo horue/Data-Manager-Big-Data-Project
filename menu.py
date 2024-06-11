@@ -1,6 +1,7 @@
 import webbrowser as wb
 import sys
 import os
+from analizer import *
 
 def principal_menu():
     option=input("> ")
@@ -34,6 +35,7 @@ def analisar_vendas_menu():
     option=input('> ')
     if option == ('1'):
         print('Produtos mais vendidos.')
+        mais_vendidos(mes_desejado=4)
     elif option == ('2'):
         print('Produtos menos vendidos.')
     elif option == ('3'):
