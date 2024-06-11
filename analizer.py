@@ -1,6 +1,6 @@
 import pandas as pd
 
-dados_vendas = pd.read_csv('dados.csv')
+dados_vendas = pd.read_csv('vendas.csv')
 df = dados_vendas
 df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y')
 
