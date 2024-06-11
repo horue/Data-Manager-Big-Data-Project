@@ -20,7 +20,7 @@ def principal_menu():
 def analisar_menu():
     option=input('> ')
     if option == ('1'):
-        print(1)
+        media_vendas()
     elif option == ('2'):
         analisar_vendas()
     elif option == ('3'):
@@ -64,7 +64,7 @@ def principal():
     print("#" * 35)
     print('# Data Manager - Tela Inicial #')
     print("#" * 35)
-    print('1 — Buscar dados')
+    print('1 — Sair')
     print('2 — Analisar dados')
     print('3 — Exportar dados')
     print('3 — Ajuda')
