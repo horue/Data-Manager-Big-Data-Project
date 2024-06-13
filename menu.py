@@ -17,6 +17,14 @@ def principal_menu():
         print("Por favor, entre um comando válido.")
         principal_menu()
 
+def continuar_analisar_menu():
+    option = input("Deseja realizar outra consulta? (s/n): ")
+    if option.lower() == 's':
+        analisar()
+    else:
+        principal()
+
+
 def analisar_menu():
     option = input('> ')
     if option == '1':
