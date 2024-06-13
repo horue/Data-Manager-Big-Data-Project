@@ -121,10 +121,38 @@ def analisar_vendas():
     print('Feito por Jorge Magno e Matheus Binder.')
     analisar_vendas_menu()
 
+def exportar_dados_final():
+    exportar()
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("#" * 35)
+    print('# Data Manager - Tela de Exportação #')
+    print("#" * 35)
+    print("Dados exportados com sucesso.")
+    print("Aperte enter para voltar à tela inicial.")
+    def option_f():
+        option =input('> ')
+        if option == '':
+            principal()
+        else:
+            print('Opção inválida. Aperte Enter para voltar à tela inicial.')
+            option_f()
+    option_f()
+
+
+def exportar_dados_apertar():
+    option =input('> ')
+    if option == '':
+        exportar_dados_final()
+    elif option == '1':
+        principal()
+    else:
+        print('Opção inválida. Aperte Enter para tentar novamente ou use 1 para voltar à tela inicial.')
+        exportar_dados_apertar()
+
 def exportar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("#" * 35)
     print('# Data Manager - Tela de Exportação #')
     print("#" * 35)
-    print("Funcionalidade de exportação ainda não implementada.")
-    principal()
+    print("Aperte Enter para exportar os dados atualizados.")
+    exportar_dados_apertar()
