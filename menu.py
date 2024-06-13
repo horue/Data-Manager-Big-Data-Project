@@ -29,6 +29,7 @@ def analisar_menu():
     option = input('> ')
     if option == '1':
         media_vendas()
+        continuar_analisar_menu()
     elif option == '2':
         analisar_vendas()
     elif option == '3':
@@ -45,10 +46,12 @@ def analisar_vendas_menu():
         print('Produtos mais vendidos.')
         mes = int(input('Digite o mês desejado (1-12): '))
         mais_vendidos(mes_desejado=mes)
+        continuar_analisar_menu()
     elif option == '2':
         print('Produtos menos vendidos.')
         mes = int(input('Digite o mês desejado (1-12): '))
         menos_vendidos(mes_desejado=mes)
+        continuar_analisar_menu()
     elif option == '3':
         meses(ascending=False)
     elif option == '4':
