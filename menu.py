@@ -44,12 +44,12 @@ def analisar_vendas_menu():
     option = input('> ')
     if option == '1':
         print('Produtos mais vendidos.')
-        mes = int(input('Digite o mês desejado (1-12): '))
+        mes = int(input('Digite o mês desejado (1-6): '))
         mais_vendidos(mes_desejado=mes)
         continuar_analisar_menu()
     elif option == '2':
         print('Produtos menos vendidos.')
-        mes = int(input('Digite o mês desejado (1-12): '))
+        mes = int(input('Digite o mês desejado (1-6): '))
         menos_vendidos(mes_desejado=mes)
         continuar_analisar_menu()
     elif option == '3':
